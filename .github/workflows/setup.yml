@@ -48,12 +48,8 @@ jobs:
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           token: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
-      - name: Update template
-        uses: upptime/uptime-monitor@v1.45.1
-        with:
-          command: "update-template"
-        env:
-          GH_PAT: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
+      # Atualização automática do modelo desligada: ela reescreve os fluxos e exigiria um token pessoal amplo (GH_PAT).
+      # Para atualizar o Upptime, faça manualmente a partir do modelo upptime/upptime.
       - name: Update response time
         uses: upptime/uptime-monitor@v1.45.1
         with:
