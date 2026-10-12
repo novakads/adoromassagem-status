@@ -1,31 +1,101 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Página pública de status da Adoro Massagem (status.adoromassagem.com).
+owner: novakads
+repo: adoromassagem-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Site
+    url: https://adoromassagem.com
+    maxResponseTime: 5000
+  - name: Busca de profissionais
+    url: https://adoromassagem.com/salvador/relaxante
+    maxResponseTime: 5000
+  - name: Entrar na conta
+    url: https://adoromassagem.com/entrar
+    maxResponseTime: 5000
+  # Depois da publicação do sistema v2, ligar também a verificação interna (banco e serviços):
+  # - name: Sistema
+  #   url: https://adoromassagem.com/api/health
+  #   maxResponseTime: 5000
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.adoromassagem.com
+  name: Adoro Massagem · Status
+  logoUrl: https://raw.githubusercontent.com/novakads/adoromassagem-status/master/assets/logo.png
+  favicon: https://raw.githubusercontent.com/novakads/adoromassagem-status/master/assets/favicon.png
+  faviconSvg: https://raw.githubusercontent.com/novakads/adoromassagem-status/master/assets/favicon.svg
+  theme: light
+  introTitle: "**Status da Adoro Massagem**"
+  introMessage: Acompanhe aqui, em tempo real, se o site está funcionando. Verificamos a cada 5 minutos. Em caso de problema, publicamos as atualizações nesta página.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+    - title: Ir para o site
+      href: https://adoromassagem.com
+  robotsText: "User-agent: *\nAllow: /"
+  css: |
+    body, input, button { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    body { background: #FAF9F7; color: #17151A; }
+    a { color: #B3105C; }
+    a:hover { color: #E5197B; }
+  i18n:
+    locale: pt-BR
+    activeIncidents: Incidentes em andamento
+    allSystemsOperational: Tudo funcionando normalmente
+    incidentReport: "Ver o incidente #$NUMBER →"
+    activeIncidentSummary: Aberto em $DATE · $POSTS atualizações
+    incidentTitle: Incidente $NUMBER
+    incidentDetails: Detalhes do incidente
+    incidentFixed: Resolvido
+    incidentOngoing: Em andamento
+    incidentOpenedAt: Aberto em
+    incidentClosedAt: Fechado em
+    incidentViewOnGitHub: Acompanhar no GitHub
+    incidentCommentSummary: Publicado em $DATE por $AUTHOR
+    incidentBack: ← Voltar para os incidentes
+    pastIncidents: Incidentes anteriores
+    pastIncidentsResolved: Resolvido em $MINUTES minutos · $POSTS atualizações
+    liveStatus: Agora
+    overallUptime: "Disponibilidade: $UPTIME"
+    overallUptimeTitle: Disponibilidade
+    averageResponseTime: "Tempo médio de resposta: $TIMEms"
+    averageResponseTimeTitle: Tempo médio de resposta
+    sevelDayResponseTime: Tempo de resposta em 7 dias
+    responseTimeMs: Tempo de resposta (ms)
+    up: No ar
+    down: Fora do ar
+    degraded: Lento
+    ms: ms
+    loading: Carregando
+    navGitHub: GitHub
+    footer: Adoro Massagem · Novak Digital Business · CNPJ 44.669.255/0001-17
+    rateLimitExceededTitle: Muitas consultas em pouco tempo
+    rateLimitExceededIntro: Esta página consulta os dados de status no GitHub, que limita o número de consultas por hora. Aguarde alguns minutos e recarregue.
+    rateLimitExceededWhatDoesErrorMean: O que isso quer dizer?
+    rateLimitExceededErrorMeaning: Cada endereço de internet pode fazer até 60 consultas por hora aos dados desta página, e esse limite foi atingido.
+    rateLimitExceededErrorHowCanFix: Como resolver?
+    rateLimitExceededErrorFix: Aguarde até uma hora e recarregue a página.
+    rateLimitExceededGeneratePAT: Saiba como gerar um token do GitHub
+    rateLimitExceededHasSet: Você definiu um token pessoal.
+    rateLimitExceededRemoveToken: Remover token
+    rateLimitExceededGitHubPAT: Token pessoal do GitHub
+    rateLimitExceededCopyPastePAT: Copie e cole o seu token
+    rateLimitExceededSaveToken: Salvar token
+    errorTitle: Algo deu errado
+    errorIntro: Não conseguimos carregar o status mais recente.
+    errorText: Tente de novo em alguns instantes.
+    errorHome: Ir para o início
+    pastScheduledMaintenance: Manutenções anteriores
+    scheduledMaintenance: Manutenção programada
+    scheduledMaintenanceSummaryStarted: Começou em $DATE · $DURATION minutos
+    scheduledMaintenanceSummaryStarts: Começa em $DATE · $DURATION minutos
+    startedAt: Começou em
+    startsAt: Começa em
+    duration: Duração
+    durationMin: $DURATION minutos
+    incidentCompleted: Concluída
+    incidentScheduled: Programada
+    duration24H: 24 h
+    duration7D: 7 dias
+    duration30D: 30 dias
+    duration1Y: 1 ano
+    durationAll: tudo
